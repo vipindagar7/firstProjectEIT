@@ -111,3 +111,25 @@ nav a{
     background-color: white;
     margin: 24px;
 }
+
+.project-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}   
+.card{
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+    padding: 28px;
+    border: 2px solid black;    
+}
+.card img{
+    height: 296px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
