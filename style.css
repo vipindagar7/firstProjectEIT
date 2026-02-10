@@ -133,3 +133,18 @@ nav a{
     border-radius: 5px;
     margin-bottom: 12px;
 }
+
+#open{
+    display: none;
+}
+#close{
+    display: none;
+}
+@media (max-width:768px) {
+    #nav{
+        display: none;
+    }
+    #open{
+        display: block;
+    }
+}

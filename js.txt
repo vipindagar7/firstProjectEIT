@@ -1,0 +1,41 @@
+datatypes
+premitive
+number no int and float
+bool
+string
+undefined let x
+let x = null
+BigInt
+symbol
+ non premetive
+  
+array
+object
+
+
+opertor
+arthmetic
++ - * / % **
+
+assignment 
+=
++= arth + =
+
+comparision
+== , === ,  != !== < > >= <=
+
+logical && ! || 
+
+unary operators 
+++ -- 
+
+ternary operators 
+cond? true: false;
+
+
+
+typeof datatypes
+
+
+
+
