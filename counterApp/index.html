@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+
+            border-radius: 5px;
+            padding: 28px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+
+    <button onclick="addData()">store item</button>
+    <button onclick="show()">show item</button>
+    <button onclick="deletItem()">clear item</button>
+
+    
+</body>
+<script>
+    function greet() {
+        sessionStorage.setItem("list", "hello world")
+    }
+
+    function show() {
+        alert(sessionStorage.getItem("list"))
+    }
+
+    function deletItem() {
+        console.log("   clearing item")
+        sessionStorage.removeItem("list")
+    }
+    function addData() {
+        let data = [
+            { title: "HTML", desc: "Learn HTML basics" },
+            { title: "CSS", desc: "Learn CSS styling" },
+            { title: "JavaScript", desc: "Learn JS" },
+            { title: "React", desc: "Learn React" },
+            { title: "Node", desc: "Learn Backend" }
+        ];
+
+        data.forEach((item, index) => {
+
+            let div = document.createElement("div")
+            div.setAttribute("id", `card-${index}`)
+            // div.setAttribute("key", `card-${index}`)
+            div.setAttribute("class", "card")
+            let h3 = document.createElement("h3")
+            h3.innerText = item.title
+            let p = document.createElement("p")
+            p.innerText = item.desc
+            div.appendChild(h3)
+            div.appendChild(p)
+            document.body.appendChild(div)
+
+
+        })
+    }
+</script>
+<script>
+ 
+
+    // document.getElementById("child").addEventListener("click", () => {
+    //     let arr = [1, 2, 3, 4, 5];
+
+    //     let a = arr.map((item) => {
+    //         return item * 2;
+    //     });
+
+    //     let b = arr.forEach((item) => {
+    //         return item * 2;
+    //     });
+    //      let c = arr.filter((item) => {
+    //         return item > 2;
+    //     });
+    //     let d = arr.reduce((acc, item) => {
+    //         return acc + item;
+    //     });
+
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    //     console.log(d);
+    // });
+
+    document.body.addEventListener("click", (e) => {
+        console.log("body clicked");
+        if (e.target.tagName === "BUTTON") {
+            console.log(`${e.target.innerText} button clicked`);
+        }
+    });
+
+</script>
+
+</html>

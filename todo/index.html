@@ -63,56 +63,22 @@
 </head>
 
 <body>
-
 <div class="box">
   <h2>Todo App</h2>
-
   <input type="text" id="title" placeholder="Enter task">
   <button onclick="addTask()">Add</button>
-
   <ul id="taskList"></ul>
 </div>
-
 <script>
 
   function addTask() {
     let input = document.getElementById("title");
-    let taskText = input.value;
-
-    if (taskText === "") {
-      alert("Please enter task");
-      return;
-    }
-
     let li = document.createElement("li");
-
-    let span = document.createElement("span");
-    span.innerText = taskText;
-
-    span.onclick = function () {
-      toggleTask(span);
-    };
-
-    let deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    deleteButton.className = "deleteButton";
-
-    deleteButton.onclick = function () {
-      deleteTask(li);
-    };
-
-    li.appendChild(span);
-    li.appendChild(deleteButton);
-
+    li.innerText = input.value;
     document.getElementById("taskList").appendChild(li);
-
     input.value = "";
   }
 
-
-  function deleteTask(taskElement) {
-    taskElement.remove();
-  }
 
 
  
