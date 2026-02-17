@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+
+            border-radius: 5px;
+            padding: 28px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+
+    <button onclick="addData()">store item</button>
+    <button onclick="show()">show item</button>
+    <button onclick="deletItem()">clear item</button>
+
+    <div id="grandParent">
+        <div id="parent">
+            <button id="child">Click</button>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    // document.getElementById("grandParent").addEventListener("click", () => {
+    //     console.log("grandParent clicked");
+    // });
+    // document.getElementById("parent").addEventListener("click", () => {
+    //     console.log("parent clicked");
+    // });
+    // document.getElementById("child").addEventListener("click", (event) => {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Data fetched successfully");
+            }, 2000);
+        });
+        promise.then((data) => {
+            console.log(data);
+        });
+        console.log("child clicked");
+
+    });
+    // let hello6 = setInterval(() => {
+    //     console.log("hello6")
+    // }, 2000);
+    // function deletItem() {
+    //     clearInterval(hello6)
+    // }
+
+    // document.getElementById("child").addEventListener("click", () => {
+    //     let arr = [1, 2, 3, 4, 5];
+    //     let a = arr.map((item) => {
+    //         return item * 2;
+    //     });
+    //     let b = arr.forEach((item) => {
+    //         return item * 2;
+    //     });
+    //      let c = arr.filter((item) => {
+    //         return item > 2;
+    //     });
+    //     let d = arr.reduce((acc, item) => {
+    //         return acc + item;
+    //     });
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    //     console.log(d);
+    // });
+
+    // document.body.addEventListener("click", (e) => {
+    //     console.log("body clicked");
+    //     if (e.target.tagName === "BUTTON") {
+    //         console.log(`${e.target.innerText} button clicked`);
+    //     }
+    // });
+
+</script>
+
+</html>

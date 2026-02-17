@@ -8,7 +8,7 @@
     <style>
         .card {
             width: 200px;
-
+            background-color: lightpink;
             border-radius: 5px;
             padding: 28px;
             border: 2px solid black;
@@ -21,11 +21,11 @@
 
     <button onclick="addData()">store item</button>
     <button onclick="show()">show item</button>
-    <button onclick="deletItem()">clear item</button>
+    <button onclick="deletItem()">clear item</button> 
 
     
 </body>
-<script>
+ <script>
     function greet() {
         sessionStorage.setItem("list", "hello world")
     }
@@ -44,10 +44,18 @@
             { title: "CSS", desc: "Learn CSS styling" },
             { title: "JavaScript", desc: "Learn JS" },
             { title: "React", desc: "Learn React" },
-            { title: "Node", desc: "Learn Backend" }
+            { title: "Node", desc: "Learn Backend" },
+            {title: "MongoDB", desc: "Learn Database"},
+            { title: "CSS", desc: "Learn CSS styling" },
+            { title: "JavaScript", desc: "Learn JS" },
+            { title: "React", desc: "Learn React" },
+            { title: "Node", desc: "Learn Backend" },
+            {title: "MongoDB", desc: "Learn Database"},
+            
+
         ];
 
-        data.forEach((item, index) => {
+        data.map((item, index) => {
 
             let div = document.createElement("div")
             div.setAttribute("id", `card-${index}`)
@@ -60,13 +68,11 @@
             div.appendChild(h3)
             div.appendChild(p)
             document.body.appendChild(div)
-
-
         })
     }
 </script>
 <script>
- 
+  
 
     // document.getElementById("child").addEventListener("click", () => {
     //     let arr = [1, 2, 3, 4, 5];
@@ -91,12 +97,7 @@
     //     console.log(d);
     // });
 
-    document.body.addEventListener("click", (e) => {
-        console.log("body clicked");
-        if (e.target.tagName === "BUTTON") {
-            console.log(`${e.target.innerText} button clicked`);
-        }
-    });
+  
 
 </script>
 
