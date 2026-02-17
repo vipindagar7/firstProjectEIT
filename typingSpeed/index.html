@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Typing Speed Test</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #sentence {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typing Speed Tester</h1>
+
+    <p id="sentence"></p>
+
+    <textarea id="input" placeholder="Start typing..."></textarea>
+    <br>
+
+    <button onclick="startTest()">Start Test</button>
+
+    <h2 id="timer">Time: 10</h2>
+    <h2 id="result"></h2>
+
+</body>
+<script>
+    let sentences = [
+        "javascript is very powerful language",
+        "i am learning web development",
+        "practice makes a man perfect",
+        "coding is fun and interesting"
+    ];
+    let time = 10;
+    let timer;
+    let selectedSentence = "";
+    function startTest() {
+        selectedSentence = sentences[Math.floor(Math.random() * sentences.length)];
+        document.getElementById("sentence").innerText = selectedSentence;
+
+        document.getElementById("input").value = "";
+        document.getElementById("result").innerText = "";
+        time = 10;
+        document.getElementById("timer").innerText = "Time: " + time;
+
+        timer = setInterval(countDown, 1000);
+    }
+    function countDown() {
+        time--;
+        document.getElementById("timer").innerText = "Time: " + time;
+
+        if (time === 0) {
+            clearInterval(timer);
+            endTest();
+        }
+    }
+    function endTest() {
+        let typedText = document.getElementById("input").value;
+
+        let wordCount = typedText.trim().split(" ").length;
+        let speed = typedText.length > 0 ? wordCount * 6 : 0;
+
+        if (typedText === selectedSentence) {
+            document.getElementById("result").innerText =
+                "Speed: " + speed + " WPM";
+        } else {
+            document.getElementById("result").innerText =
+                "Speed: " + speed + " WPM";
+        }
+    }
+</script>
+
+</html>
