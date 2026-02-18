@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Auto Image Slider</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .slider img {
+            width: 600px;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Auto Image Slider</h1>
+
+    <div class="slider">
+        <img id="slide" src="https://picsum.photos/id/1015/600/300" />
+    </div>
+
+    <div class="buttons">
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">Next</button>
+        <button onclick="stopSlider()">Stop</button>
+        <button onclick="startSlider()">Start</button>
+    </div>
+
+    <script>
+        let images = [
+            "https://picsum.photos/id/1015/600/300",
+            "https://picsum.photos/id/1016/600/300",
+            "https://picsum.photos/id/1020/600/300",
+            "https://picsum.photos/id/1024/600/300",
+            "https://picsum.photos/id/1035/600/300"
+        ];
+
+        let index = 0;
+        let slider;
+
+        function showImage() {
+            document.getElementById("slide").src = images[index];
+        }
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            showImage();
+        }
+        function prev() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            showImage();
+        }
+        function startSlider() {
+            slider = setInterval(next, 2000); 
+        }
+        function stopSlider() {
+            clearInterval(slider);
+        }
+
+        startSlider();
+
+    </script>
+</body>
+
+</html>
