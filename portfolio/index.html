@@ -1,142 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    -->
-    
+    <title>Harsh Jadon | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- this is a header -->
-    <header>
-        <div class="logo">
-            <img src="./logo.webp" alt="logo">
-        </div>
-        <!-- navigation menu -->
-        <nav id="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div>
-            <button id="open" onclick="openMenu()">Open</button>
-            <button id="close" onclick="closeMenu()">Close</button>
-        </div>
-        <!-- contact button -->
-        <div class="cta">
-            <button class="button" onclick="greet()">Contact Me</button>
-        </div>
-    </header>
-    <main>
-        <section id="home" class="container">
-            <div class="box left">
-                <div class="role vertical">
-                    <span>product designer</span>
-                </div>
-                <div class="intro">
-                    <div class="stats">
-                        <div class="project-complete">
-                            <H3>200+</H3>
-                            <h5>Project completed</h5>
-                        </div>
-                        <div class="startup-raised">
-                            <H3>50+</H3>
-                            <h5>Startup raised</h5>
-                        </div>
-                    </div>
-                    <div class="name">
-                        <h1>HELLO</h1>
-                        <h3 id="main-heading" onclick="changeHeading()">I'm a developer</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="box right">
-                <img src="./logo.webp" class="dev-img" alt="developer image">
-            </div>
-        </section>
-        <section id="about" class="container">
-            <div class="box left">
-            <h1>about me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            </div>
-            <div class="box centre">
-                <div>
-                    <img class="icon" src="./logo.webp" alt="">
-                </div>
-                <h1>120%</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis consectetur dignissimos. Possimus, enim, a repellendus accusantium velit modi omnis at est iure numquam pariatur nisi vel sint excepturi minus.
+<div id="terminal"></div>
 
-                </p>
-                <div>
-                    <img src="./logo.webp" alt="">
-                </div>
-            </div>
-            <div class="box right">
-                <div>
-                    <img class="" src="./logo.webp" alt="">
-                </div>
-                <ul type="disc">
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cum, cupiditate recusandae eius tenetur repellendus minima id obcaecati quisquam? Perspiciatis delectus sunt blanditiis excepturi?</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cum, cupiditate recusandae eius tenetur repellendus minima id obcaecati quisquam? Perspiciatis delectus sunt blanditiis excepturi?</li>
-                </ul>
-            </div>
-        </section>
-     
-        <section id="services" class="container">
-            <h1>Services</h1>
-        </section>
-        <section id="portfolio" class="container">
-            <h1>Portfolio</h1>
-            <div class="project-card">
-                <div class="card">
-                    <img src="./logo.webp" alt="project image">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="card">
-                    <img src="./logo.webp" alt="project image">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="card">
-                    <img src="./logo.webp" alt="project image">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="card">
-                    <img src="./logo.webp" alt="project image">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                
-            </div>
-        </section>
-        <section id="contact" class="container">
-            <h1>Contact Me</h1>
-            <form action="#">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit" onclick="changeBG()">Send</button>
-            </form>
-        </section>ˀ
-    </main>
-
+<script src="script.js"></script>
 </body>
-     <script src="./script.js"></script>
-
 </html>

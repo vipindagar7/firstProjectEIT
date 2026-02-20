@@ -38,24 +38,24 @@
     // document.getElementById("parent").addEventListener("click", () => {
     //     console.log("parent clicked");
     // });
-    // document.getElementById("child").addEventListener("click", (event) => {
-        let promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve("Data fetched successfully");
-            }, 2000);
-        });
-        promise.then((data) => {
-            console.log(data);
-        });
-        console.log("child clicked");
+    document.getElementById("child").addEventListener("click", (event) => {
+        function heavy() {
+            for (let i = 0; i < 100000000000; i++) { }
+            console.log("Heavy done");
+        }
+
+        console.log("Start");
+        heavy();
+        console.log("End");
 
     });
-    // let hello6 = setInterval(() => {
-    //     console.log("hello6")
-    // }, 2000);
-    // function deletItem() {
-    //     clearInterval(hello6)
-    // }
+    let hello6 = setTimeout(() => {
+        console.log("hello6")
+    }, 5000);
+
+    function deletItem() {
+        clearTimeout(hello6)
+    }
 
     // document.getElementById("child").addEventListener("click", () => {
     //     let arr = [1, 2, 3, 4, 5];
